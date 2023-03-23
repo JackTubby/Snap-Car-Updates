@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'Open Sans', "Ubuntu", sans-serif;
+    margin: 0;
+}
+
+button {
+    border: 1px solid rgba(34, 34, 34, 0.5);
+    padding: 4px;
+    color: black;
+    border-radius: 6px;
+    min-width: 80px;
+    min-height: 35px;
+}
