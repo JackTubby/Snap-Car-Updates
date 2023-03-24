@@ -10,7 +10,7 @@ const Navbar = () => {
         <h3 className="dark:white hover:text-custom-light-purple cursor-pointer">Testimonials</h3>
       </div>
       <div className="absolute right-14 space-x-8">
-        <button className="hover:text-custom-light-purple dark:white">Login</button>
+        <button className="dark:text-white hover:text-custom-light-purple dark:hover:text-custom-light-purple">Login</button>
         <button className="bg-custom-purple hover:bg-custom-light-purple border-0 text-white">Signup</button>
       </div>
     </div>
