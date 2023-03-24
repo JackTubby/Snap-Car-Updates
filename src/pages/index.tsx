@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 import Navbar from "@/components/Navbar";
 import ModeToggler from "@/components/ModeToggler";
+import Sidebar from "@/components/sidebars/Sidebar";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <ModeToggler/>
+        <ModeToggler />
       </main>
     </>
   );
