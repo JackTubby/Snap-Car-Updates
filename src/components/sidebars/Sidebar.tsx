@@ -1,7 +1,12 @@
+import Open from "./Open";
+import Closed from "./Closed";
+
 const Sidebar = () => {
   return (
     <div className="h-screen w-64 border-r-2 border-black">
-      <div className="text-center p-8"></div>
+      <div className="text-center p-8">
+
+      </div>
     </div>
   );
 };
