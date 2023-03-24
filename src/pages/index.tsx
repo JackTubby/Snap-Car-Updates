@@ -1,13 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import { useTheme } from "next-themes";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <Head>
@@ -18,7 +20,13 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar />
+        <button
+          aria-label="Toggle Dark Mode"
+          type="button"
+          className="p-3 h-12 w-12 order-2 md:order-3 dark:text-white"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >Toggler</button>
       </main>
     </>
-  )
+  );
 }
