@@ -10,7 +10,8 @@ const Closed = () => {
   return (
     <>
       <>
-        <div className="pb-16 space-y-2">
+        <div className="pb-16 space-y-2 text-center p-8">
+          <h2 className="pb-16">Snap Car Updates</h2>
           <div className="flex justify-center p-2 cursor-pointer rounded-md text-2xl text-gray-600 dark:text-gray-400 dark:hover:bg-slate-300/20 hover:bg-slate-300">
             <BsBell />
           </div>
