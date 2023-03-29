@@ -1,11 +1,17 @@
+import { useState } from "react";
+
 import Open from "./Open";
 import Closed from "./Closed";
 
 const Sidebar = () => {
+
+  const [isShown, setIsShown] = useState(false);
+  const sidebarWidth = isShown ? "w-64" : "w-36";
+
   return (
-    <div className="h-screen w-64 border-r-2 border-black">
-      <div className="text-center p-8">
-        <h2 className="pb-16">Snap Car Updates</h2>
+    <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} className="bg-blue-300 w-80">
+      <div className={`h-screen ${sidebarWidth} border-r-2 border-black`}>
+          {isShown ? <Open /> : <Closed />}
       </div>
     </div>
   );
