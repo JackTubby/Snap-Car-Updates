@@ -11,10 +11,7 @@ import { IoMdStats } from "react-icons/io";
 const Open = () => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+      <div
         className="pb-16 space-y-2 text-center p-8"
       >
         <h2 className="pb-16">Snap Car Updates</h2>
@@ -94,7 +91,7 @@ const Open = () => {
             </motion.div>
           </div>
         </>
-      </motion.div>
+      </div>
     </>
   );
 };
