@@ -1,7 +1,10 @@
 const LoginForm = () => {
-    return (
-      <form></form>
-    );
-  };
-  
-  export default LoginForm;
+  return (
+    <form>
+      <input type="text" placeholder="Email" />
+      <input type="text" placeholder="Password" />
+    </form>
+  );
+};
+
+export default LoginForm;
