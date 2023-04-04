@@ -1,4 +1,4 @@
-import LoginForm from "../../components/auth-forms/LoginForm";
+import LoginForm from "./auth-forms/LoginForm";
 
 const Login = () => {
   return (
@@ -9,7 +9,18 @@ const Login = () => {
       <div className="py-14">
         <LoginForm />
       </div>
-      <a>Click here to signup</a>
+      <button
+        className="w-1/2 p-2 
+                bg-black 
+                text-white 
+                dark:bg-white 
+                dark:text-black 
+                hover:bg-custom-purple 
+                hover:ease-in 
+                hover:duration-100"
+      >
+        Log In
+      </button>
     </div>
   );
 };

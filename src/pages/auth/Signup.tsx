@@ -1,4 +1,4 @@
-import SignupForm from "../../components/auth-forms/SignupForm";
+import SignupForm from "./auth-forms/SignupForm";
 
 const Signup = () => {
   return (
@@ -11,7 +11,18 @@ const Signup = () => {
       <div className="py-14">
         <SignupForm />
       </div>
-      <a>Click here to login</a>
+      <button
+        className="w-1/2 p-2 
+                bg-black 
+                text-white 
+                dark:bg-white 
+                dark:text-black 
+                hover:bg-custom-purple 
+                hover:ease-in 
+                hover:duration-100"
+      >
+        Sign up
+      </button>
     </>
   );
 };
