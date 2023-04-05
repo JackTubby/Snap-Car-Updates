@@ -18,13 +18,14 @@ const Signup = () => {
                 dark:bg-white 
                 dark:text-black 
                 hover:bg-custom-purple 
+                dark:hover:bg-custom-purple 
                 hover:ease-in 
                 hover:duration-100"
       >
         Sign up
       </button>
       <div className="mt-4">
-        <button className="hover:text-custom-purple hover:border-none border-none">Already got an account? Click here to login.</button>
+        <button className="hover:text-custom-purple hover:border-none border-none dark:text-white dark:hover:text-custom-purple">Already got an account? Click here to login.</button>
       </div>
     </>
   );

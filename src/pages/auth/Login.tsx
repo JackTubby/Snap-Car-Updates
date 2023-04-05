@@ -15,13 +15,14 @@ const Login = () => {
                 text-white 
                 dark:bg-white 
                 dark:text-black 
-                hover:bg-custom-purple 
+                hover:bg-custom-purple
+                dark:hover:bg-custom-purple 
                 hover:ease-in 
                 hover:duration-100"
       >
         Log In
       </button>
-      <button className="hover:text-custom-purple hover:border-none border-none">Haven&apos;t got an account? Create one here.</button>
+      <button className="hover:text-custom-purple hover:border-none border-none dark:text-white dark:hover:text-custom-purple">Haven&apos;t got an account? Create one here.</button>
     </div>
   );
 };

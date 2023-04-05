@@ -12,7 +12,8 @@ const LoginForm = () => {
               outline-none 
               focus:border-custom-purple 
               focus:ease-in 
-              focus:duration-200"
+              focus:duration-200
+              dark:bg-inherit"
             />
           </div>
           <div className="p-4 mt-4">
@@ -24,7 +25,8 @@ const LoginForm = () => {
               outline-none 
               focus:border-custom-purple 
               focus:ease-in 
-              focus:duration-200"
+              focus:duration-200
+              dark:bg-inherit"
             />
           </div>
           <div className="p-4 mt-4">
@@ -36,7 +38,8 @@ const LoginForm = () => {
               outline-none 
               focus:border-custom-purple 
               focus:ease-in 
-              focus:duration-200"
+              focus:duration-200
+              dark:bg-inherit"
             />
           </div>
         </div>
