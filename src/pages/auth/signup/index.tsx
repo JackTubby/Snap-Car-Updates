@@ -18,19 +18,6 @@ const Signup = () => {
           <div className="py-14">
             <SignupForm />
           </div>
-          <button
-            className="w-1/2 p-2 
-                bg-black 
-                text-white 
-                dark:bg-white 
-                dark:text-black 
-                hover:bg-custom-purple 
-                dark:hover:bg-custom-purple 
-                hover:ease-in 
-                hover:duration-100"
-          >
-            Sign up
-          </button>
           <div className="mt-4">
             <Link
               href="/auth/login"
