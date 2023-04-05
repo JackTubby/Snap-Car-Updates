@@ -13,12 +13,12 @@ const AuthPage = () => {
         {loginOrSignup ? <Login /> : <Signup />}
       </div>
       <div className="flex w-6/12 h-screen">
-        <div className="w-5/6 h-5/6 m-auto">
-          <Image
-            src={garageImg}
-            alt="Image of a car workshop"
-            className="h-full rounded-2xl"
-          />
+        <div className="w-5/6 h-5/6 m-auto p-2 border-2 border-custom-purple rounded-2xl">
+            <Image
+              src={garageImg}
+              alt="Image of a car workshop"
+              className="h-full rounded-2xl"
+            />
         </div>
       </div>
     </div>
