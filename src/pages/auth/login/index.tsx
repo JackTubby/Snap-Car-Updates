@@ -1,7 +1,9 @@
-import LoginForm from "../../components/auth-forms/LoginForm";
+import Link from "next/link";
+
+import LoginForm from "../../../components/auth-forms/LoginForm";
 
 import Image from "next/image";
-import garageImg from "../../../public/assets/img/garage.jpg";
+import garageImg from "../../../../public/assets/img/garage.jpg";
 
 const Login = () => {
   return (
@@ -28,9 +30,12 @@ const Login = () => {
             Log In
           </button>
           <div className="mt-4">
-            <button className="hover:text-custom-purple hover:border-none border-none dark:text-white dark:hover:text-custom-purple">
+          <Link
+              href="/auth/signup"
+              className="hover:text-custom-purple hover:border-none border-none dark:text-white dark:hover:text-custom-purple"
+            >
               Haven&apos;t got an account? Create one here.
-            </button>
+            </Link>
           </div>
         </div>
       </div>
