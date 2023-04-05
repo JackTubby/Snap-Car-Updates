@@ -23,6 +23,9 @@ const Signup = () => {
       >
         Sign up
       </button>
+      <div className="mt-4">
+        <button className="hover:text-custom-purple hover:border-none border-none">Already got an account? Click here to login.</button>
+      </div>
     </>
   );
 };

@@ -21,6 +21,7 @@ const Login = () => {
       >
         Log In
       </button>
+      <button className="hover:text-custom-purple hover:border-none border-none">Haven&apos;t got an account? Create one here.</button>
     </div>
   );
 };
