@@ -1,19 +1,21 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from "../../firebase/firebaseApp";
+import { useRouter } from 'next/router';
 
 const LoginForm = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
   const onLogin = (e:any) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-
         console.log(user);
+        router.push("/");
     })
     .catch((error) => {
         const errorCode = error.code;
