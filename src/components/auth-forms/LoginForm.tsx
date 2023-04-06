@@ -1,10 +1,36 @@
+import React, {useState} from 'react';
+import {  signInWithEmailAndPassword   } from 'firebase/auth';
+import { auth } from "../../firebase";
+
 const LoginForm = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const onLogin = (e:any) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+
+        console.log(user);
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+    });
+  }
   return (
     <form className="flex justify-center">
       <div className="w-1/2">
         <div className="p-4 mt-4">
           <input
-            type="text"
+            type="email"
+            id='email-address'
+            name='email'
+            required
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             className="border-b-2 
             w-full 
@@ -17,8 +43,12 @@ const LoginForm = () => {
         </div>
         <div className="p-4 mt-4">
           <input
-            type="text"
+            type="password"
+            id='password'
+            name='password'
+            required
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
             className="border-b-2 
             w-full 
             outline-none 
@@ -28,6 +58,20 @@ const LoginForm = () => {
             dark:bg-inherit"
           />
         </div>
+        <button
+        onClick={onLogin}
+            className="w-1/2 p-2 
+                bg-black 
+                text-white 
+                dark:bg-white 
+                dark:text-black 
+                hover:bg-custom-purple
+                dark:hover:bg-custom-purple 
+                hover:ease-in 
+                hover:duration-100"
+          >
+            Log In
+          </button>
       </div>
     </form>
   );
