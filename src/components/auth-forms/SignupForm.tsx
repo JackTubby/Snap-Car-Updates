@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/firebase";
+import { auth } from "@/firebase/firebaseApp";
 import { useState } from "react";
 
 const SignupForm = () => {

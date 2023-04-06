@@ -3,9 +3,9 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 
 import React, { useState, useEffect } from "react";
-import Firebase from "../firebase";
+import Firebase from "../firebase/firebaseApp";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../firebase/firebaseApp";
 
 
 const formatAuthUser = (user:any) => ({
