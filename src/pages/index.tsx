@@ -1,10 +1,11 @@
+// NEXT.JS IMPORTS
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
+// REACT & FIREBASE IMPORTS
+import React, { useState, useEffect } from "react";
+// COMPONENT IMPORTS
 import Navbar from "@/components/Navbar";
 import ModeToggler from "@/components/ModeToggler";
 import Sidebar from "@/components/sidebars/Sidebar";
@@ -19,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        {/* {user ? <h1>TRUE</h1> : FALSE} */}
         <ModeToggler />
       </main>
     </>
