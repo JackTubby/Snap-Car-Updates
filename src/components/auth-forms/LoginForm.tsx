@@ -1,13 +1,18 @@
-import { useState } from 'react';
-import {  signInWithEmailAndPassword   } from 'firebase/auth';
-import { auth } from "../../firebase/firebaseApp";
+import { useState, useEffect } from 'react';
+import {  getAuth, signInWithEmailAndPassword   } from 'firebase/auth';
 import { useRouter } from 'next/router';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
+import useUserChecker from '@/hooks/userChecker';
 
 const LoginForm = () => {
+  // Check if a user is logged in
+  useUserChecker();
 
+  const router = useRouter();
+  const auth = getAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const router = useRouter();
   const onLogin = (e:any) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
