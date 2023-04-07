@@ -1,7 +1,8 @@
+// Next imports
 import Link from "next/link";
-
+// Component imports
 import SignupForm from "../../../components/auth-forms/SignupForm";
-
+// Image imports
 import Image from "next/image";
 import garageImg from "../../../../public/assets/img/garage.jpg";
 

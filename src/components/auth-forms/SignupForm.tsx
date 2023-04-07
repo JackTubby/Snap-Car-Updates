@@ -1,29 +1,28 @@
+import { useState } from "react";
+// Firebase imports
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/firebase/firebaseApp";
-import { useState } from "react";
 
 const SignupForm = () => {
-
-    // const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-  
-    const onSubmit = async (e:any) => {
-      e.preventDefault();
-  
-      await createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          console.log(user);
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-        });
-    }
-  
+  // const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const onSubmit = async (e: any) => {
+    // Prevent refresh on submit
+    e.preventDefault();
+    // Use firebase to create a user
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
 
   return (
     <>
