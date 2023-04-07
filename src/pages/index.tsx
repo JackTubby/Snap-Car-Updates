@@ -5,12 +5,28 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 // REACT & FIREBASE IMPORTS
 import React, { useState, useEffect } from "react";
+import { initFirebase } from "@/firebase/firebaseApp";
+import { useAuthState } from "react-firebase-hooks/auth"
+import { getAuth } from "firebase/auth";
 // COMPONENT IMPORTS
 import Navbar from "@/components/Navbar";
 import ModeToggler from "@/components/ModeToggler";
 import Sidebar from "@/components/sidebars/Sidebar";
 
 export default function Home() {
+
+  initFirebase();
+  const auth = getAuth();
+  const [ user, loading ] = useAuthState(auth);
+  if (loading) {
+    return <div>Loading ...</div>;
+  }
+  if (user) {
+    return <div>Welcome {user.email}</div>;
+  }
+
+  
+
   return (
     <>
       <Head>
